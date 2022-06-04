@@ -3,4 +3,6 @@
 # 34,67,55,33,12,98
 
 lst = list(input().strip().split(","))
+t = tuple(lst)
 print(lst)
+print(t)

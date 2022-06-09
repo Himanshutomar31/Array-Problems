@@ -28,3 +28,7 @@ def question_15(string_digit):
 
 inp = input()
 print(question_15(inp))
+
+
+a = input()
+print(sum(int(i*a) for i in range(1, 5)))

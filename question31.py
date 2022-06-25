@@ -57,6 +57,20 @@ class Tree:
             if t.right != None:
                 q.append(t.right)
 
+    def level_handler(self, root, level):
+        if root is None:
+            return None
+        if level == 1:
+            print(root.data, end="")
+        elif level > 1:
+            self.level_handler(root.left, level-1)
+            self.level_handler(root.right, level-1)
+
+    def level_order_recur(self, n1):
+        h = self.height(n1)
+        for i in range(1, h+1):
+            self.level_handler(n1, i)
+
 
 t = Tree()
 n1 = TreeNode(1)
@@ -79,3 +93,5 @@ print()
 print(t.height(n1))
 print(t.totalNode(n1))
 t.level_order(n1)
+print()
+t.level_order_recur(n1)
